@@ -18,9 +18,11 @@ def home():
 
 @app.route('/<name>')
 def user(name):
-    user = users.find({'name':name})
-
-    return user.next()['mobile']
+    user = users.find_one({'name':name})
+    if user:
+        return user['mobile']
+    else:
+        return "Sorry"   
 
 if __name__ == '__main__':
     app.run(debug=True,port=8181)
