@@ -12,6 +12,7 @@ users = mobileDB.get_collection('users')
 
 myname = 'Essa'
 
+# Hi this is the new changes
 
 
 @app.route('/hi/<name>')
