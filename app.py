@@ -10,13 +10,23 @@ mobileDB = client.get_database('mobile')
 
 users = mobileDB.get_collection('users')
 
+myname = 'Essa'
+
+
+
+@app.route('/hi/<name>')
+def test(name):
+    myname = 'Ali'
+    myname = 'Mohammed'
+    
+    return "<h1>Hi, "+name+"</h1>"
 
 
 @app.route('/')
 def home():
     return '<h1>Halla</h1>'
 
-@app.route('/<name>')
+@app.route('/users/<name>')
 def user(name):
     user = users.find_one({'name':name})
     if user:
