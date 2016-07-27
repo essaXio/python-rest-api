@@ -17,11 +17,15 @@ users = mobileDB.get_collection('users')
 
 
 @app.route('/hi/<name>')
-def test(name):
+def test(name=None):
     myname = 'Ali'
     myname = 'Mohammed'
     
     return "<h1>Hi, "+name+"</h1>"
+
+@app.route('/hi/')
+def noneHi():
+    return test()
 
 @app.route("/json", methods=['POST'])
 def json():
