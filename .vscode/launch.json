@@ -14,6 +14,18 @@
             ]
         },
         {
+            "name": "ENV",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${file}",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        },
+        {
             "name": "Python Console App",
             "type": "python",
             "request": "launch",
