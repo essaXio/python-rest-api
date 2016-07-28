@@ -6,7 +6,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-client = MongoClient(host='ec2-54-173-3-167.compute-1.amazonaws.com')
+client = MongoClient(host='localhost)
 
 mobileDB = client.get_database('mobile')
 
@@ -32,6 +32,7 @@ def json():
     
     #app.logger.debug("JSON received...")
     #app.logger.debug(request.json)
+    
     
     if request.get_json():
         mydata = request.get_json() # will be 
