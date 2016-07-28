@@ -6,7 +6,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-client = MongoClient(host='localhost)
+client = MongoClient(host='localhost'')
 
 mobileDB = client.get_database('mobile')
 
