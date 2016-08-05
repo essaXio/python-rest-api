@@ -1,0 +1,10 @@
+version: '2'
+services:
+    webapp:
+        image: webapp
+        ports: 
+            - 8010:8010
+        
+
+    db:
+        image: mongo

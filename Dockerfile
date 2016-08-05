@@ -1,6 +1,7 @@
 
-FROM docker/whalesay:latest
+FROM python:3-onbuild
+COPY . /app
+WORKDIR /app
+EXPOSE 8000
 
-RUN apt-get -y update && apt-get install -y fortunes
-
-CMD /usr/games/fortune -a | cowsay
+CMD ["gunicorn", "--bind","0.0.0.0:8000","app:app"]
